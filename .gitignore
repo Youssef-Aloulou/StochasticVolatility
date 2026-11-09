@@ -1,0 +1,24 @@
+# Environnements Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Données (non versionnées, à retélécharger)
+data/raw/
+data/processed/
+
+# Secrets
+.env
+
+# Outils
+.pytest_cache/
+.ruff_cache/
+
+# Système
+.DS_Store

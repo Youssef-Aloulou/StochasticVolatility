@@ -1,0 +1,16 @@
+name: sv-pf
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=2.0.2
+  - scipy
+  - pandas
+  - matplotlib
+  - pytest
+  - ruff
+  - pip
+  - pip:
+      - particles==0.4
+      - yfinance
+      - -e .
