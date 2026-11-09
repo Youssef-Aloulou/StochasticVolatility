@@ -10,8 +10,10 @@ dist/
 .ipynb_checkpoints/
 
 # Données (non versionnées, à retélécharger)
-data/raw/
-data/processed/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
 
 # Secrets
 .env
