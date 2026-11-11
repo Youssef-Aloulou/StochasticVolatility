@@ -11,7 +11,10 @@ def download_sp500(path, start, end, ticker="^GSPC"):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    df = yf.download(ticker, start=start, end=end, auto_adjust=True, progress=False)
+    # Ajout du dernier jour
+    end_incl = (pd.Timestamp(end) + pd.Timedelta(days=1)).strftime("%Y-%m-%d")
+
+    df = yf.download(ticker, start=start, end=end_incl, auto_adjust=True, progress=False)
     if df.empty:
         raise RuntimeError(f"Aucune donnée pour {ticker} entre {start} et {end}.")
 

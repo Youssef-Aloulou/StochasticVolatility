@@ -19,6 +19,7 @@ data/processed/*
 .env
 
 # Outils
+.vscode/
 .pytest_cache/
 .ruff_cache/
 

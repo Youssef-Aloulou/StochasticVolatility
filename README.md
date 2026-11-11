@@ -53,6 +53,10 @@ The periods are defined in `src/sv_pf/config.py` (`PERIODS`). To download them a
 ```bash
 # Download the S&P 500 daily prices for every period in PERIODS (one CSV per period in data/raw/)
 python -m sv_pf.data
+
+# Compute daily log-returns y_t = 100 * log(C_t / C_{t-1}) for every period in PERIODS (one CSV per period in data/processed/)
+python -m sv_pf.preprocess
+
 ```
 
 Files are saved in `data/raw/` as `sp500_<name>.csv` (for example `data/raw/sp500_1982-1989.csv`). They are not versioned.
