@@ -62,6 +62,17 @@ python -m sv_pf.preprocess
 Files are saved in `data/raw/` as `sp500_<name>.csv` (for example `data/raw/sp500_1982-1989.csv`). They are not versioned.
 
 
+## TODO
+
+| # | Task | Where | Owner |
+|---|---|---|---|
+| 1 | SV-GARCH particle filter **Appendix B : Particle filter estimation of SV-GARCH model** (from scratch, no `particles`): estimate $\ell(\theta)$ at fixed $\theta$ with a standard bootstrap filter | `notebooks/04_pf_svgarch.ipynb` | |
+| 2 | Smooth likelihood: same filter with continuous resampling, so $\theta \mapsto \ell(\theta)$ is smooth | `notebooks/05_continuous_pf.ipynb` | |
+| 3 | MLE on the S&P 500 (BFGS on the continuous filter), comparison with the article | `notebooks/06_mle_sp500.ipynb` | |
+| 4 | Report and results (AIC/BIC vs. the article) | `README.md` / report | |
+
+**Already done:** SV / SVL / SVLJ models (with `particles`) and simulations (`notebooks/02_simulation_sv.ipynb`), SV-GARCH simulation (`notebooks/03_sv-garch.ipynb`).
+
 ## Authors
 
 - Youssef Aloulou
